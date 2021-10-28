@@ -1,0 +1,27 @@
+a = open ('new.txt', 'r')
+b = a.read()
+a.close()
+
+
+val = ['']
+
+j = 0
+
+
+for i in range(len(b)):
+    if b[i] != ' ':
+        val[j] += b[i]
+    else:
+        j += 1
+        val.append('')
+
+for i in range(len(val)):
+    val[i] = int(val[i])
+
+print(val)
+
+sum = 0
+
+for i in range(len(val)):
+     sum += val[i]
+print(sum)
